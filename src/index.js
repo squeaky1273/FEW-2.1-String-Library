@@ -56,7 +56,7 @@ function upperFirstWords(str) {
     return str_words.join(' ')
 }
 
-console.log(upperWords('hello foo bar world!'))
+console.log(upperFirstWords('hello foo bar world!'))
 
 // String.prototype.upperFirstWords = function() {
 //     const str_words = str.split(/ |\B(?=[A-Z])/);
@@ -71,6 +71,15 @@ console.log(upperWords('hello foo bar world!'))
 
 
 // CHALLENGE 4
+console.log('--- removeExtraSpaces ---')
+// Conver string to remove extra spaces.
+// "   Hello    world!   " -> "Hello world!"
+function removeExtraSpaces(str) {
+    return str.replace(/\s+/g, ' ').trim()
+ }
+
+ex_str = "lol      please     work"
+console.log(removeExtraSpaces(ex_str))
 
 
 // CHALLENGE 5
@@ -156,7 +165,37 @@ console.log(camelCase(str))
 // console.log(str.camelCase())
 
 // CHALLENGE 8
+console.log('--- shift ---')
+// Conver string to shift.
+// Hello World -> ello WorldH
+function shift(str) {
+    return str.slice(1) + str[0]
+ }
+
+console.log(shift(str))
 
 // CHALLENGE 9
+console.log('--- makeHashTag(str) ---')
+// Conver string to make hashtag.
+// Amazing bongo drums for sale -> ['#amazing', '#bongo', '#drums']
+function makeHashTag(str) {
+    const str_words = str.split(/ |\B(?=[A-Z])/);
+
+    for (let i = 0; i < str_words.length; i++) {
+        str_words[i] = '#' + str_words[i][0].toUpperCase() + str_words[i].substr(1);
+    }
+    return str_words.join()
+ }
+
+console.log(makeHashTag(str))
 
 // CHALLENGE 10
+console.log('--- isEmpty ---')
+// Conver string to return if string is empty or not.
+// Abc def -> isEmpty("Abc def") // false
+// function isEmpty(str) {
+//     str.trim('')
+//     if str
+//  }
+
+// console.log(isEmpty(str))
