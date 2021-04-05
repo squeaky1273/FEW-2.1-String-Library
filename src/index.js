@@ -16,14 +16,12 @@ console.log('--- upperFirst ---')
 function upperFirst(str) {
     return str.replace(/^./, str[0].toUpperCase())
 }
-  
-console.log(upperFirst('foo'))
 
-// String.prototype.upperFirst = function() {
-//     return str.replace(/^./, str[0].toUpperCase())
-//   }
+String.prototype.upperFirst = function() {
+    return upperFirst(this)
+  }
 
-// console.log('foo'.upperFirst())
+console.log('foo'.upperFirst())
 
 
 // CHALLENGE 2
@@ -34,13 +32,11 @@ function upperAll(str) {
     return str.toUpperCase()
 }
 
-console.log(upperAll('foo'))
+String.prototype.upperAll = function() {
+    return upperAll(this)
+  }
 
-// String.prototype.upperAll = function() {
-//     return str.toUpperCase()
-//   }
-
-// console.log('foo'.upperAll())
+console.log('foo'.upperAll())
 
 
 // CHALLENGE 3
@@ -56,18 +52,11 @@ function upperFirstWords(str) {
     return str_words.join(' ')
 }
 
-console.log(upperFirstWords('hello foo bar world!'))
+String.prototype.upperFirstWords = function() {
+    return upperFirstWords(this)
+}
 
-// String.prototype.upperFirstWords = function() {
-//     const str_words = str.split(/ |\B(?=[A-Z])/);
-
-//     for (let i = 0; i < str_words.length; i++) {
-//         str_words[i] = str_words[i][0].toUpperCase() + str_words[i].substr(1);
-//     }
-//     return str_words.join(' ')
-// }
-
-// console.log(str.upperFirstWords())
+console.log(str.upperFirstWords())
 
 
 // CHALLENGE 4
@@ -78,8 +67,11 @@ function removeExtraSpaces(str) {
     return str.replace(/\s+/g, ' ').trim()
  }
 
-ex_str = "lol      please     work"
-console.log(removeExtraSpaces(ex_str))
+String.prototype.removeExtraSpaces = function() {
+    return removeExtraSpaces(this)
+  }
+
+console.log('foo   hee'.removeExtraSpaces())
 
 
 // CHALLENGE 5
@@ -94,22 +86,13 @@ function kebabCase(str, sep = '-') {
         str_words[i] = str_words[i][0].toLowerCase() + str_words[i].substr(1);
     }
     return str_words.join(sep)
-  
 }
 
-console.log(kebabCase('hello world foo bar'))
+String.prototype.kebabCase = function(sep = '-') {
+    return kebabCase(this)
+}
 
-// String.prototype.kebabCase = function(sep = '-') {
-//     const str_words = str.split(/ |\B(?=[A-Z])/);
-
-//     for (let i = 0; i < str_words.length; i++) {
-//         str_words[i] = str_words[i][0].toLowerCase() + str_words[i].substr(1);
-//     }
-//     return str_words.join(sep)
-  
-// }
-
-// console.log(str.kebabCase())
+console.log(str.kebabCase())
 
 
 // CHALLENGE 6
@@ -124,21 +107,13 @@ function snakeCase(str) {
         str_words[i] = str_words[i][0].toLowerCase() + str_words[i].substr(1);
     }
     return str_words.join('_')
-  
 }
-console.log(snakeCase(str))
 
-// String.prototype.snakeCase = function() {
-//     const str_words = str.split(/ |\B(?=[A-Z])/);
+String.prototype.snakeCase = function() {
+    return snakeCase(this)
+}
 
-//     for (let i = 0; i < str_words.length; i++) {
-//         str_words[i] = str_words[i][0].toLowerCase() + str_words[i].substr(1);
-//     }
-//     return str_words.join('_')
-  
-// }
-
-// console.log(str.snakeCase())
+console.log(str.snakeCase())
 
 
 // CHALLENGE 7
@@ -153,16 +128,11 @@ function camelCase(str) {
      });
  }
 
-console.log(camelCase(str))
+String.prototype.camelCase = function() {
+    return camelCase(this)
+ }
 
-// String.prototype.camelCase = function() {
-//     return str.replace(/\W+(.)/g, function(match, chr)
-//     {
-//          return chr.toUpperCase();
-//      });
-//  }
-
-// console.log(str.camelCase())
+console.log(str.camelCase())
 
 // CHALLENGE 8
 console.log('--- shift ---')
@@ -172,7 +142,11 @@ function shift(str) {
     return str.slice(1) + str[0]
  }
 
-console.log(shift(str))
+String.prototype.shift = function() {
+    return shift(this)
+  }
+
+console.log('foo'.shift())
 
 // CHALLENGE 9
 console.log('--- makeHashTag(str) ---')
@@ -187,15 +161,26 @@ function makeHashTag(str) {
     return str_words.join()
  }
 
-console.log(makeHashTag(str))
+String.prototype.makeHashTag = function() {
+    return makeHashTag(this)
+  }
 
-// CHALLENGE 10
-console.log('--- isEmpty ---')
-// Conver string to return if string is empty or not.
-// Abc def -> isEmpty("Abc def") // false
+console.log('foo'.makeHashTag())
+
+// // CHALLENGE 10
+// console.log('--- isEmpty ---')
+// // Conver string to return if string is empty or not.
+// // Abc def -> isEmpty("Abc def") // false
 // function isEmpty(str) {
-//     str.trim('')
-//     if str
+//     const new_str = str.trim()
+//     for (new_str) {
+//         if (/\n\r\t/) {
+//             return true  
+//         } else {
+//             return false
+//         }
+//     }
 //  }
+// str == "sdfr"
 
 // console.log(isEmpty(str))
