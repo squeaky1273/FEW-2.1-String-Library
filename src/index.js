@@ -10,7 +10,7 @@ console.log(str.split(''))
 
 
 // CHALLENGE 1
-console.log('--- upperFirst ---')
+// console.log('--- upperFirst ---')
 // The function below needs to uppercase the 
 // first letter of the input string
 function upperFirst(str) {
@@ -21,11 +21,9 @@ String.prototype.upperFirst = function() {
     return upperFirst(this)
   }
 
-console.log('foo'.upperFirst())
-
 
 // CHALLENGE 2
-console.log('--- upperAll ---')
+// console.log('--- upperAll ---')
 // The function below needs to uppercase the 
 // all letters of the input string
 function upperAll(str) {
@@ -36,11 +34,11 @@ String.prototype.upperAll = function() {
     return upperAll(this)
   }
 
-console.log('foo'.upperAll())
+// console.log('foo'.upperAll())
 
 
 // CHALLENGE 3
-console.log('--- upperFirstWord ---')
+// console.log('--- upperFirstWord ---')
 // The function below needs to upper case the first 
 // letter of each word in the input string
 function upperFirstWords(str) {
@@ -56,11 +54,11 @@ String.prototype.upperFirstWords = function() {
     return upperFirstWords(this)
 }
 
-console.log(str.upperFirstWords())
+// console.log(str.upperFirstWords())
 
 
 // CHALLENGE 4
-console.log('--- removeExtraSpaces ---')
+// console.log('--- removeExtraSpaces ---')
 // Conver string to remove extra spaces.
 // "   Hello    world!   " -> "Hello world!"
 function removeExtraSpaces(str) {
@@ -71,11 +69,11 @@ String.prototype.removeExtraSpaces = function() {
     return removeExtraSpaces(this)
   }
 
-console.log('foo   hee'.removeExtraSpaces())
+// console.log('foo   hee'.removeExtraSpaces())
 
 
 // CHALLENGE 5
-console.log('--- kebabCase ---')
+// console.log('--- kebabCase ---')
 // Conver string to kebab case.
 // hello world -> hello-world
 
@@ -92,11 +90,11 @@ String.prototype.kebabCase = function(sep = '-') {
     return kebabCase(this)
 }
 
-console.log(str.kebabCase())
+// console.log(str.kebabCase())
 
 
 // CHALLENGE 6
-console.log('--- snakeCase ---')
+// console.log('--- snakeCase ---')
 // Conver string to snake case.
 // hello world -> hello_world
 
@@ -113,11 +111,11 @@ String.prototype.snakeCase = function() {
     return snakeCase(this)
 }
 
-console.log(str.snakeCase())
+// console.log(str.snakeCase())
 
 
 // CHALLENGE 7
-console.log('--- camelCase ---')
+// console.log('--- camelCase ---')
 // Conver string to camel case.
 // hello world -> helloWorld
 
@@ -132,10 +130,10 @@ String.prototype.camelCase = function() {
     return camelCase(this)
  }
 
-console.log(str.camelCase())
+// console.log(str.camelCase())
 
 // CHALLENGE 8
-console.log('--- shift ---')
+// console.log('--- shift ---')
 // Conver string to shift.
 // Hello World -> ello WorldH
 function shift(str) {
@@ -146,10 +144,10 @@ String.prototype.shift = function() {
     return shift(this)
   }
 
-console.log('foo'.shift())
+// console.log('foo'.shift())
 
 // CHALLENGE 9
-console.log('--- makeHashTag(str) ---')
+// console.log('--- makeHashTag(str) ---')
 // Conver string to make hashtag.
 // Amazing bongo drums for sale -> ['#amazing', '#bongo', '#drums']
 function makeHashTag(str) {
@@ -164,8 +162,6 @@ function makeHashTag(str) {
 String.prototype.makeHashTag = function() {
     return makeHashTag(this)
   }
-
-console.log('foo'.makeHashTag())
 
 // // CHALLENGE 10
 // console.log('--- isEmpty ---')
@@ -184,3 +180,16 @@ console.log('foo'.makeHashTag())
 // str == "sdfr"
 
 // console.log(isEmpty(str))
+
+
+module.exports = {
+    upperFirst,
+    upperAll,
+    upperFirstWords,
+    shift,
+    kebabCase,
+    camelCase,
+    snakeCase,
+    removeExtraSpaces,
+    makeHashTag
+}
