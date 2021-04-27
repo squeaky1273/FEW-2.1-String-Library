@@ -132,6 +132,7 @@ String.prototype.camelCase = function() {
 
 // console.log(str.camelCase())
 
+
 // CHALLENGE 8
 // console.log('--- shift ---')
 // Conver string to shift.
